@@ -10,6 +10,7 @@ import { IntroPageComponent } from './Pages/intro-page/intro-page.component';
 import { KeysIntroComponent } from './Pages/keys-intro/keys-intro.component';
 import { IntroQuestionsComponent } from './Pages/intro-questions/intro-questions.component';
 import { KeysQuestionsComponent } from './Pages/keys-questions/keys-questions.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { KeysQuestionsComponent } from './Pages/keys-questions/keys-questions.co
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],

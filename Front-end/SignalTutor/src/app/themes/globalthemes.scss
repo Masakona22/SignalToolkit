@@ -1,0 +1,11 @@
+@import '/node_modules/@angular/material/theming';
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss  
+$primary-color:mat-palette($mat-cyan,900);
+$accent-color:mat-palette($mat-light-blue,900);
+$warn-color:mat-palette($mat-red,500);
+
+$my-theme: mat-light-theme($primary-color, $accent-color);
+
+@include angular-material-theme($my-theme);

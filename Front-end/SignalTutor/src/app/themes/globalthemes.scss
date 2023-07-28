@@ -2,8 +2,8 @@
 @include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss  
-$primary-color:mat-palette($mat-cyan,900);
-$accent-color:mat-palette($mat-light-blue,900);
+$primary-color:mat-palette($mat-green,500);
+$accent-color:mat-palette($mat-light-green,500);
 $warn-color:mat-palette($mat-red,500);
 
 $my-theme: mat-light-theme($primary-color, $accent-color);

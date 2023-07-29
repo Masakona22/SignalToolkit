@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-intro-page',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro-page.component.scss']
 })
 export class IntroPageComponent {
+
+  constructor(private router:Router) { }
+
+  // Navigate to the next page
+  keysPage(){
+    this.router.navigateByUrl('KeysIntro');
+  }
 
 }

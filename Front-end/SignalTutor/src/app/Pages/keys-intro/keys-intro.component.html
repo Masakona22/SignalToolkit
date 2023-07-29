@@ -1,1 +1,119 @@
-<p>keys-intro works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">Encryption keys</p>
+  <div class="content-body">
+    <mat-card class="card-class">
+      <p class="secondary-header">What is an encryption key?</p>
+      <p class="text">
+        An encryption key is a random string of bits created explicitly for
+        scrambling and unscrambling data. Encryption keys are designed with
+        algorithms intended to ensure that every key is unpredictable and
+        unique. The longer the key built in this manner, the harder it is to
+        crack the encryption code. An encryption key is used to encrypt,
+        decrypt, or carry out both functions, based on the sort of encryption
+        software used.
+      </p>
+      <p class="secondary-header">How does an encryption key work?</p>
+      <p class="text">
+        Encryption algorithms are implemented in software. They encrypt data by
+        applying a key to unencrypted data. Ciphertext results from that
+        process. It is protected from unauthorized access and is accessible only
+        to users or software that have the proper decryption key. Encrypted data
+        is decrypted when the encryption algorithm applies the correct key to
+        the ciphertext.
+      </p>
+      <img
+        src="/assets/img/encryption_operation-f.png"
+        class="img-example"
+        alt="Key picture"
+      />
+      <p class="secondary-header">What does an encryption key do?</p>
+      <p class="text">
+        Encryption keys represent a data variable used to control how an
+        algorithm processes plaintext into ciphertext and back. For symmetric
+        ciphers, the encryption key should be accessible only to users who are
+        authorized to access the encrypted data. For asymmetric encryption
+        algorithms, which use pairs of encryption keys, the public key is
+        intended to be shared and need not be kept secret. However, the key pair
+        owner should never share the private key.
+      </p>
+      <p class="secondary-header">How are encryption keys generated?</p>
+      <p class="text">
+        Passwords have their limitations. They are usually limited to characters
+        accessible from a computer keyboard. On the other hand, cryptographic
+        keys can consist of any string of bits. Such strings may be rendered in
+        human-accessible character sets, if necessary. Factors that affect the
+        strength of a key include the following:
+        <li>
+          <ul>
+            <strong>Key Length:</strong>
+            The longer the key, the more difficult it is to crack the encryption
+            code. Over the years, acceptable key length matches have grown in
+            tandem with computer power. For example, in the early 1990s, the
+            first secure web servers used 40-bit keys to encrypt data; by 2015,
+            the National Institute of Standards and Technology (NIST)
+            recommended a minimum key length of 2,048 bits for use with the RSA,
+            or Rivest-Shamir-Adleman, encryption algorithm.
+          </ul>
+          <ul>
+            <strong>Key generation algorithm:</strong>
+            The algorithm used to generate the key should be sufficiently
+            complex to ensure that the key is unpredictable. Commercial software
+            often relies on a pseudo-random number generator (PRNG) to generate
+            private keys. However, PRNG output is not truly random, and a
+            determined attacker can defeat it with sufficient resources. A
+            source of physical entropy, such as a physical dice roll or coin
+            toss, is required to generate truly random numbers. For example,
+            when users generate a public key pair using the Pretty Good Privacy
+            (PGP) public key encryption program, they are prompted to generate
+            entropy by randomly moving their mouse.
+          </ul>
+          <ul>
+            <strong>Key management:</strong>
+            Like any perishable commodity used in organizations, encryption keys
+            require management. They must be created, administered and deleted
+            when needed.<br />
+            The key management tasks include:
+            <br />
+            <ul>
+              <li>
+                provisioning or creating strong encryption keys for
+                organizational needs
+              </li>
+              <li>
+                backing up keys that must be recoverable after system failures
+              </li>
+              <li>storing keys securely</li>
+              <li>deploying keys to systems that need them</li>
+              <li>managing and monitoring use of deployed keys</li>
+              <li>
+                rotating keys to prevent overexposing them to sensitive material
+              </li>
+              <li>
+                archiving keys that are no longer being actively used for data
+                recovery
+              </li>
+              <li>
+                disposing keys that are no longer required to prevent
+                unauthorized use
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </p>
+      <img
+        src="/assets/img/cryptographic_key_lifecycle-f.png"
+        class="img-example"
+        alt="Key picture"
+      />
+      <mat-card-actions>
+        <button mat-raised-button color="warn" [style.width.px]="200">
+          Continue
+        </button>
+        <button mat-raised-button color="accent" [style.width.px]="200" class="next-button">
+            Skip
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

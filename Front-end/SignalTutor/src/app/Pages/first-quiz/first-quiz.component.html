@@ -1,0 +1,53 @@
+<div class="my-container">
+    <div class="quiz-section">
+      <div class="quiz-box active">
+        <div class="quiz-titles">
+            <h1>Encryption basics Quiz</h1>
+            <p>Test your knowledge about encryption basics</p>
+        </div>
+        <div class="quiz-header">
+            <span>Quiz website tutorials</span>
+            <span class="header-score"></span>
+        </div>
+        <h2 class="question-text">
+            
+        </h2>
+        <div class="option-list">
+            
+        </div>
+        <div class="quiz-footer">
+            <span class="question-total"></span>
+            <button mat-raised-button color="warn" class="btn btn-primary" (click)="next()">
+                <mat-icon>
+                    forward
+                </mat-icon>
+                Next Question
+            </button>
+        </div>
+      </div>
+      <div class="results">
+        <h2>Results</h2>
+        <div class="percentage-container">
+            <div class="circular-progress">
+                <span class="percentage">0%</span>
+            </div>
+
+            <span class="score-text">Your score is</span>
+        </div>
+        <div class="btn-group">
+            <button mat-raised-button color="primary" class="btn btn-primary" (click)="tryAgain()">
+                <mat-icon>
+                    refresh
+                </mat-icon>
+                Try Again
+            </button>
+            <button mat-raised-button color="primary" class="home-button" (click)="backToHome()">
+                <mat-icon>
+                    home
+                </mat-icon>
+                Back to Home
+            </button>
+        </div>
+      </div>
+    </div>
+</div>

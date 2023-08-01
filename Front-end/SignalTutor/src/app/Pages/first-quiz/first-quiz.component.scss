@@ -1,0 +1,211 @@
+@import '/src/app/themes/themes.scss';
+
+.my-container{
+    background-image: url('/assets/img/patterns.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+   
+    .quiz-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        pointer-events: auto;
+        transition: .3s ease;
+        transition-delay: 1s;
+
+        .results{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            background: #fff;
+            border: 2px solid $primary-color;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            h2{
+                font-size: 36px;
+
+            }
+
+            .percentage-container{
+                width: 300px;
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin: 20px 0 40px;
+
+                .circular-progress{
+                    position: relative;
+                    width: 230px;
+                    height: 230px;
+                    background: conic-gradient($warn-color 3.6deg, $accent-color 0deg );
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .circular-progress::before{
+                    content: '';
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    background: #fff;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+
+                .percentage{
+                    position: relative;
+                    font-size: 45px;
+                    color: black;
+                    font-weight: $font-weight-bold;
+                }
+
+                .score-text{
+                    font-size: 20px;
+                    font-weight: $font-weight-bold;
+                    margin-top: $margin;
+                }
+            }
+
+            .btn-group{
+                display: flex;
+                align-items: center;
+
+                justify-content: space-between;
+                padding: auto;
+                margin: $margin 0;
+
+                .home-button{
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+        .results.active{
+            opacity: 1;
+            pointer-events: auto;
+            transition: 1 ease;
+            transition-delay: 1s;
+        }
+        .quiz-box{
+            position: relative;
+            opacity: 0;
+            width: 500px;
+            background-color: #fff;
+            border: 2px solid $primary-color;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 30px;
+            
+            .quiz-titles{
+
+                h1{
+                    font-size: $font-size24;
+                    text-align: center;
+                    font-weight: $font-weight-bold;
+                    
+                }
+                p{
+                    font-size: $font-size16;
+                    text-align: center;
+                }
+
+            }
+            .quiz-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 0;
+                border-bottom: 2px solid $accent-color;
+
+                span{
+                    font-size: $font-size16;
+                    font-weight: $font-weight-bold;
+                }
+            }
+
+            .question-text{
+                font-size:$font-size20;
+                font-weight: $font-weight-bold;
+                text-align: center;
+                margin: $margin 0;
+            }
+
+            .option-list{
+                .option{
+                    width: 100%;
+                    padding: $padding;
+                    border: 2px solid $gray-color;
+                    background: transparent;
+                    border-radius: $border-radius;
+                    margin: $margin 0;
+                    cursor: pointer;
+                    transition: .3s ease;
+                }
+
+                .option:hover{
+                    background: $gray-color;
+                    border-color: $primary-color-dark;
+                }
+
+                .option.correct{
+                    color: $green-color;
+                    background: #fff;
+                    border-color: $primary-color;
+                }
+
+                .option.incorrect{
+                    color: $warn-color;
+                    background: #fff;
+                    border-color: $warn-color;
+                }
+
+                .option.disabled{
+                    pointer-events: none;
+                    opacity: .5;
+                }
+            }
+
+            .quiz-footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 0;
+                border-top: 2px solid $accent-color;
+
+                .question-total{
+                    font-size: $font-size16;
+                    font-weight: $font-weight-bold;
+                }
+                span{
+                    font-size: $font-size16;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+
+        .quiz-box.active{
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+            transition: 1 ease;
+            transition-delay: 1s;
+        }
+    }
+    
+}

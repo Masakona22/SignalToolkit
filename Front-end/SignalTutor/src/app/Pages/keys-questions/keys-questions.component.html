@@ -1,1 +1,42 @@
-<p>keys-questions works!</p>
+<app-navbar class="my-nav"></app-navbar>
+<div class="my-container">
+    <div class="content-body">
+        <section class="quiz-section">
+
+        </section>
+        <section class="card">
+            <mat-card class="card-class">
+                <p class="header">First Quiz</p>
+                <p class="text">This quiz will focus on the first the basics of encryption, and the role of keys. Click below to get started.<strong> Good luck!</strong>   
+                </p>
+                <div class="btn-group-2">
+                    <button mat-raised-button color="accent" class="btn-start" (click)="onClick()">
+                        <mat-icon>play_arrow</mat-icon>
+                        View instructions
+                    </button>
+                    <button mat-raised-button color="primary" class="btn-next-module" (click)="onNext()">
+                        <mat-icon>insert_drive_file</mat-icon>
+                        Next module
+                    </button>
+                </div>
+            </mat-card>
+        </section>
+
+        <div class="popup-info">
+            <h2>Quiz 1</h2>
+            <span class="info">1. It is a short quesionnaire</span>
+            <span class="info">2. Pick one of the multiple choices available</span>
+            <span class="info">3. Do not refer to any external material during the assessment</span>
+            <div class="btn-group">
+                <button mat-raised-button color="warn" class="btn-exit">
+                    <mat-icon>skip_previous</mat-icon>
+                    Exit quiz
+                </button>
+                <button mat-raised-button color="accent" class="btn-next" (click)="startQuiz()">
+                    <mat-icon>quiz</mat-icon>
+                    Start quiz
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

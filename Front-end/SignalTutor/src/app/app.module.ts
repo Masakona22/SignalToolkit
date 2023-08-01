@@ -11,6 +11,8 @@ import { KeysIntroComponent } from './Pages/keys-intro/keys-intro.component';
 import { IntroQuestionsComponent } from './Pages/intro-questions/intro-questions.component';
 import { KeysQuestionsComponent } from './Pages/keys-questions/keys-questions.component';
 import { MaterialModule } from './material/material.module';
+import { EncyptionTypesComponent } from './Pages/encyption-types/encyption-types.component';
+import { FirstQuizComponent } from './Pages/first-quiz/first-quiz.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MaterialModule } from './material/material.module';
     IntroPageComponent,
     KeysIntroComponent,
     IntroQuestionsComponent,
-    KeysQuestionsComponent
+    KeysQuestionsComponent,
+    EncyptionTypesComponent,
+    FirstQuizComponent
   ],
   imports: [
     BrowserModule,

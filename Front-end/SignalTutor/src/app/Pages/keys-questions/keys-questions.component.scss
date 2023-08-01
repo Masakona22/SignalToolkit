@@ -1,0 +1,125 @@
+@import '/src/app/themes/themes.scss';
+
+.my-container{
+    background-image: url('/assets/img/patterns.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+    .content-body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+
+        .quiz-section{
+            width: 100%;
+            background-color: $primary-color;
+        }
+        
+        .card-class{
+            margin-bottom: 10px;
+            padding: auto;
+            .secondary-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: $padding;
+                margin-top: $padding;
+                padding-top: $padding;
+                padding-bottom: $padding;
+                font-size: $font-size24;
+                font-weight: bold;
+            }
+        }
+
+        .btn-group-2{
+            display:flex;
+            justify-content: space-between;
+            padding: $padding;
+            margin-right: $margin;
+
+            .btn-next-module{
+                padding-left: $padding;
+                margin-left: $margin;
+            }
+        }
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $padding;
+        margin-top: $padding;
+        padding-top: $padding;
+        padding-bottom: $padding;
+        font-size: $font-size36;
+        font-weight: bold;
+    }
+
+    .text{
+        padding: $padding;
+        font-size: $font-size16;
+    }
+
+    .popup-info{
+        position: absolute;
+        top:50%;
+        left:50%;
+        display: flex;
+        padding: $padding 25px;
+        flex-direction: column;
+        transform: translate(-50%,-50%);
+        width: 500px;
+        background: #fff;
+        border-color: $accent-color;
+        box-shadow: $box-shadow;
+        border-width: 1px;
+        border-radius: $border-radius;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s ease;
+
+        h2{
+            font-size: 50px;
+            color: $primary-color;
+        }
+
+        .info{
+            display: inline-block;
+            font-size: $font-size16;
+            color: #333;
+
+        }
+
+        .btn-group{
+            padding-top: $padding;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid $primary-color;
+            margin-top: $padding;
+            padding-top: $padding;
+
+        }
+    }
+    .popup-info.active{
+        opacity: 1;
+        pointer-events: auto;
+        filter: blur(0px);
+        
+    }
+    
+}
+
+.my-container.blur{
+    //filter: blur(5px);
+    pointer-events: none;
+}
+.my-nav.blur{
+    filter: blur(5px);
+}

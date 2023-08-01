@@ -107,11 +107,13 @@
         alt="Key picture"
       />
       <mat-card-actions>
-        <button mat-raised-button color="warn" [style.width.px]="200">
-          Continue
+        <button mat-raised-button color="warn" [style.width.px]="200" (click)="previousScreen()">
+            <mat-icon>skip_previous</mat-icon>
+            Previous screen
         </button>
-        <button mat-raised-button color="accent" [style.width.px]="200" class="next-button">
-            Skip
+        <button mat-raised-button color="accent" [style.width.px]="200" class="next-button" (click)="nextScreen()">
+            Next screen
+            <mat-icon>skip_next</mat-icon>
         </button>
       </mat-card-actions>
     </mat-card>

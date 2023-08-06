@@ -15,4 +15,8 @@ export class HomePageComponent {
     this.router.navigateByUrl('introPage');
   }
 
+  toEncryptions(){
+    this.router.navigateByUrl('encryptionTypes');
+  }
+
 }

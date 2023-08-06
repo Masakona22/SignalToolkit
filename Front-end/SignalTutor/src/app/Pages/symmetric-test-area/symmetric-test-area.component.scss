@@ -1,0 +1,141 @@
+@import "/src/app/themes/themes.scss";
+
+.container {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $padding;
+    margin-top: $padding;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    font-size: $font-size36;
+    font-weight: bold;
+  }
+  .content-body {
+    flex-direction: column;
+  }
+
+  .example-list {
+    border: solid 1px #ccc;
+    min-height: 140px;
+    width: 140px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+  }
+  .play-body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: auto;
+
+    .card-class {
+      text-align: center;
+      margin-right: $margin;
+      margin-bottom: $margin;
+
+      .example-box {
+        
+        width: 140px;
+        height: 140px;
+        border: solid 1px #ccc;
+        color: rgba(0, 0, 0, 0.87);
+        cursor: move;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+        border-radius: 4px;
+        position: relative;
+        z-index: 1;
+        transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      }
+      .cdk-drag-preview {
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+          0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+      }
+
+      .component-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .cdk-drag-placeholder {
+        opacity: 0;
+      }
+
+      .cdk-drag-animating {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      .example-box:last-child {
+        border: none;
+      }
+
+      .example-list.cdk-drop-list-dragging
+        .example-box:not(.cdk-drag-placeholder) {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    .card-class-2 {
+      margin-bottom: $margin;
+      margin-right: $margin;
+      .example-list {
+        border: solid 1px #ccc;
+        min-height: 160px;
+        width: 140px;
+        background: white;
+        border-radius: 4px;
+        overflow: hidden;
+        display: block;
+      }
+      .cdk-drag-preview {
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+          0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+      }
+      .cdk-drag-placeholder {
+        opacity: 0;
+      }
+
+      .cdk-drag-animating {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      .example-box:last-child {
+        border: none;
+      }
+
+      .example-list.cdk-drop-list-dragging
+        .example-box:not(.cdk-drag-placeholder) {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+      }
+
+      .component-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .drop-box {
+        display: grid;
+        margin-left: $margin-big;
+        margin-bottom: $margin-big;
+        width: 100%;
+        height: 100%;
+        margin-right: 0%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+    }
+  }
+}

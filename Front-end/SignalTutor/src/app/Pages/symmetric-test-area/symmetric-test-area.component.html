@@ -1,0 +1,229 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">Visual assessment</p>
+  <div class="content-body" cdkDropListGroup>
+    <div class="play-body">
+      <aside>
+        <mat-card class="card-class">
+          <mat-card-header>
+            <mat-card-title><strong>Components</strong></mat-card-title>
+          </mat-card-header>
+          <div
+            class="example-list"
+            cdkDropList
+            [cdkDropListData]="images"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div class="example-box" *ngFor="let image of images">
+              <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+            </div>
+          </div>
+        </mat-card>
+      </aside>
+      <section>
+        <mat-card class="card-class-2">
+          <mat-card-header>
+            <mat-card-title
+              ><strong>Diagram to complete</strong></mat-card-title
+            >
+          </mat-card-header>
+          <div class="drop-box">
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                  cdkDrag
+                  src="assets/img/Symmetric encryption/blank.png"
+                  alt="image"
+                  class="component-img"
+                />
+              </div>
+            </div><!--
+            --><div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                  cdkDrag
+                  src="assets/img/Symmetric encryption/top left.png"
+                  alt="top left"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="same_key"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of same_key">
+                <img
+                  cdkDrag
+                  [src]="image"
+                  [alt]="image"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/top right.png"
+                alt="top right"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/blank.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/blank.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="secret_key"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of secret_key">
+                <img
+                  cdkDrag
+                  [src]="image"
+                  [alt]="image"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/blank.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+            class="example-list"
+            cdkDropList
+            [cdkDropListData]="secret_key2"
+            (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of secret_key2">
+                <img
+                  cdkDrag
+                  [src]="image"
+                  [alt]="image"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/blank.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/plain text.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="encryption"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of encryption">
+                <img
+                  cdkDrag
+                  [src]="image"
+                  [alt]="image"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/cipher text.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="decryption"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of decryption">
+                <img
+                  cdkDrag
+                  [src]="image"
+                  [alt]="image"
+                  class="component-img"
+                />
+              </div>
+            </div>
+            <div
+              class="example-list"
+            >
+              <div class="example-box">
+                <img
+                src="assets/img/Symmetric encryption/plain text.png"
+                alt="image"
+                class="component-img"
+                />
+              </div>
+            </div>
+          </div>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="check(decryption,encryption,same_key,secret_key,secret_key2)">
+              Check
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </section>
+    </div>
+  </div>
+</div>

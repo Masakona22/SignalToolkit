@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +13,9 @@ import { KeysQuestionsComponent } from './Pages/keys-questions/keys-questions.co
 import { MaterialModule } from './material/material.module';
 import { EncyptionTypesComponent } from './Pages/encyption-types/encyption-types.component';
 import { FirstQuizComponent } from './Pages/first-quiz/first-quiz.component';
+import { SymmetricTestAreaComponent } from './Pages/symmetric-test-area/symmetric-test-area.component';
+
+import { ContentBodyComponent } from './Components/navbar/content-body/content-body.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,16 @@ import { FirstQuizComponent } from './Pages/first-quiz/first-quiz.component';
     IntroQuestionsComponent,
     KeysQuestionsComponent,
     EncyptionTypesComponent,
-    FirstQuizComponent
+    FirstQuizComponent,
+    SymmetricTestAreaComponent,
+    ContentBodyComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

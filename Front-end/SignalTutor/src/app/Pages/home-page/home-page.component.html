@@ -1,34 +1,54 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <p class="header">Available Modules</p>
-    <div class="content-body">
-        <mat-card class="card-class">
-            <mat-card-header>
-                <mat-card-title><strong>Introduction to Encryption</strong></mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p>This module will serve as an introduction to important Encryption concepts and terms</p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-flat-button class="button-class" [style.width.px]="200" (click)="toIntro()">
-                    <mat-icon>play_arrow</mat-icon>
-                    View Module
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title><strong>Different types of encryptions</strong></mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p>This module will explore the two different types of encryption techniques</p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-flat-button class="button-class" [style.width.px]="200">
-                    <mat-icon>play_arrow</mat-icon>
-                    View Module
-                </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
+  <p class="header">Available Modules</p>
+  <div class="content-body">
+    <mat-card class="card-class">
+      <mat-card-header>
+        <mat-card-title
+          ><strong>Introduction to Encryption</strong></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          This module will serve as an introduction to important Encryption
+          concepts and terms
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          class="button-class"
+          [style.width.px]="200"
+          (click)="toIntro()"
+        >
+          <mat-icon>play_arrow</mat-icon>
+          View Module
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title
+          ><strong>Different types of encryptions</strong></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          This module will explore the two different types of encryption
+          techniques
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          class="button-class"
+          [style.width.px]="200"
+          (click)="toEncryptions()"
+        >
+          <mat-icon>play_arrow</mat-icon>
+          View Module
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

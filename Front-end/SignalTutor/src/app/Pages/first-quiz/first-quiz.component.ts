@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-first-quiz',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
 })
 export class FirstQuizComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private toastr:ToastrService) {}
   QCount = 0;
   QNum = 1;
   score = 0;
@@ -112,7 +113,7 @@ export class FirstQuizComponent implements OnInit {
 
   next() {
     if (this.QCount == 4) {
-      alert('Quiz Completed');
+      this.toastr.success('Quiz Completed');
       this.showResult();
     }
     this.QCount++;
@@ -133,9 +134,17 @@ export class FirstQuizComponent implements OnInit {
     const percentageText = document.querySelector('percentage') as HTMLSpanElement;
     const progressVal = document.querySelector('.circular-progress') as HTMLDivElement;
     var progressStart = 0;
-    var progressEnd = 60;
+    var progressEnd = (this.score / this.questions.length) * 100;
     var speed = 20;
 
+    var progress = setInterval(() => {
+      progressStart++;
+      percentageText.textContent = `${progressStart}%`;
+      progressVal.style.background= `conic-gradient($warn-color ${progressStart * 3.6}deg, $accent-color 0deg );`;
+      if(progressStart == progressEnd) {
+        clearInterval(progress);
+      }
+    }, speed);
  
   }
 

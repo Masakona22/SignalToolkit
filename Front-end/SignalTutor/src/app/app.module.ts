@@ -14,8 +14,8 @@ import { MaterialModule } from './material/material.module';
 import { EncyptionTypesComponent } from './Pages/encyption-types/encyption-types.component';
 import { FirstQuizComponent } from './Pages/first-quiz/first-quiz.component';
 import { SymmetricTestAreaComponent } from './Pages/symmetric-test-area/symmetric-test-area.component';
-
 import { ContentBodyComponent } from './Components/navbar/content-body/content-body.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { ContentBodyComponent } from './Components/navbar/content-body/content-b
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     DragDropModule
   ],
   providers: [],

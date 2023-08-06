@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 const Materials=[
   MatButtonModule,
@@ -21,6 +21,7 @@ const Materials=[
   MatCheckboxModule,
   MatToolbarModule,
   MatGridListModule,
+  MatDialogModule
 ]
 
 @NgModule({

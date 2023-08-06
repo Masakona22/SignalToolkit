@@ -1,6 +1,10 @@
 import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 import { moveItemInArray } from '@angular/cdk/drag-drop';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-symmetric-test-area',
@@ -8,7 +12,7 @@ import { moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./symmetric-test-area.component.scss'],
 })
 export class SymmetricTestAreaComponent {
-  constructor() {}
+  constructor(public dialog:MatDialog,private router:Router,private toastr:ToastrService) {}
   images = [
     'assets/img/Symmetric encryption/decryption.png',
     'assets/img/Symmetric encryption/encryption.png',
@@ -40,9 +44,11 @@ export class SymmetricTestAreaComponent {
       secret_key2.length == 1 && secret_key2[0] == 'assets/img/Symmetric encryption/secret key.png'
     ) {
       console.log('true');
+      this.toastr.success('Correct Answer');
       return true;
     } else {
       console.log('false');
+      this.toastr.error('Wrong Answer');
       return false;
     }
   }
@@ -60,3 +66,12 @@ export class SymmetricTestAreaComponent {
     }
   }
 }
+
+@Component({
+  selector:'positive-dialog',
+  templateUrl:'positive-dialog.html',
+  standalone:true,
+  imports:[MatDialogModule,MatButtonModule,RouterModule]
+})
+
+export class PositiveDialog{}

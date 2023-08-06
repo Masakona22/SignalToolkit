@@ -5,9 +5,7 @@
     <div class="play-body">
       <aside>
         <mat-card class="card-class">
-          <mat-card-header>
-            <mat-card-title><strong>Components</strong></mat-card-title>
-          </mat-card-header>
+          <p class="secondary-header">Components</p>
           <div
             class="example-list"
             cdkDropList
@@ -23,11 +21,7 @@
       </aside>
       <section>
         <mat-card class="card-class-2">
-          <mat-card-header>
-            <mat-card-title
-              ><strong>Diagram to complete</strong></mat-card-title
-            >
-          </mat-card-header>
+          <p class="secondary-header">Complete this diagram based on Symmetric encryption</p>
           <div class="drop-box">
             <div
               class="example-list"
@@ -218,7 +212,8 @@
             </div>
           </div>
           <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="check(decryption,encryption,same_key,secret_key,secret_key2)">
+            <button mat-raised-button color="primary" class="checkbtn" [style.width.px]="200" (click)="check(decryption,encryption,same_key,secret_key,secret_key2)" >
+              <mat-icon>check</mat-icon>
               Check
             </button>
           </mat-card-actions>

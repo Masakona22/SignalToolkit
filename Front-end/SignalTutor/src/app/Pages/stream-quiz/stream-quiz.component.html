@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">Visual assessment</p>
+  <div class="content-body" cdkDropListGroup>
+      <div class="play-body">
+        <aside>
+          <mat-card class="card-class">
+            <p class="secondary-header">Components</p>
+            <div
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="images"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <div class="example-box" *ngFor="let image of images">
+                <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+              </div>
+            </div>
+          </mat-card>
+        </aside>
+        <section>
+          <mat-card class="card-class-2">
+            <p class="secondary-header">Complete this stream cipher diagram</p>
+            <div class="drop-box">
+              <div
+                class="example-list"
+                cdkDropList
+                [cdkDropListData]="part1"
+                (cdkDropListDropped)="drop($event)"
+              >
+                <div class="example-box" *ngFor="let image of part1">
+                  <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+                </div>
+              </div>
+              <div
+                class="example-list"
+                cdkDropList
+                [cdkDropListData]="part2"
+                (cdkDropListDropped)="drop($event)"
+              >
+                <div class="example-box" *ngFor="let image of part2">
+                  <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+                </div>
+              </div>
+              <div
+                class="example-list"
+                cdkDropList
+                [cdkDropListData]="part3"
+                (cdkDropListDropped)="drop($event)"
+              >
+                <div class="example-box" *ngFor="let image of part3">
+                  <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+                </div>
+              </div>
+              <div
+                class="example-list"
+                cdkDropList
+                [cdkDropListData]="part4"
+                (cdkDropListDropped)="drop($event)"
+              >
+                <div class="example-box" *ngFor="let image of part4">
+                  <img cdkDrag [src]="image" [alt]="image" class="component-img" />
+                </div>
+              </div>
+            </div>
+            <mat-card-actions class="button-class">
+              <button
+                mat-raised-button
+                color="primary"
+                class="checkbtn"
+                [style.width.px]="200"
+                (click)="check(part1, part2, part3, part4)"
+              >
+                <mat-icon>check</mat-icon>
+                Check
+              </button>
+              <button
+                mat-raised-button
+                color="accent"
+                class="resetbtn"
+                id="nextButton"
+                [style.width.px]="200"
+                [disabled]="true"
+                (click)="goToNextQuiz()"
+              >
+                <mat-icon>skip_next</mat-icon>
+                Next
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </section>
+      </div>
+  </div>
+</div>

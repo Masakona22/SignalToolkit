@@ -16,6 +16,13 @@ import { FirstQuizComponent } from './Pages/first-quiz/first-quiz.component';
 import { SymmetricTestAreaComponent } from './Pages/symmetric-test-area/symmetric-test-area.component';
 import { ContentBodyComponent } from './Components/navbar/content-body/content-body.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AsymmetricEncryptionComponent } from './asymmetric-encryption/asymmetric-encryption.component';
+import { AsymmetricComponent } from './Pages/asymmetric/asymmetric.component';
+import { AssymmetricContinuedComponent } from './Pages/assymmetric-continued/assymmetric-continued.component';
+import { StreamCypherComponent } from './Pages/stream-cypher/stream-cypher.component';
+import { BlockCypherComponent } from './Pages/block-cypher/block-cypher.component';
+import { StreamQuizComponent } from './Pages/stream-quiz/stream-quiz.component';
+import { BlockQuizComponent } from './Pages/block-quiz/block-quiz.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,14 @@ import { ToastrModule } from 'ngx-toastr';
     EncyptionTypesComponent,
     FirstQuizComponent,
     SymmetricTestAreaComponent,
-    ContentBodyComponent
+    ContentBodyComponent,
+    AsymmetricEncryptionComponent,
+    AsymmetricComponent,
+    AssymmetricContinuedComponent,
+    StreamCypherComponent,
+    BlockCypherComponent,
+    StreamQuizComponent,
+    BlockQuizComponent
   ],
   imports: [
     BrowserModule,

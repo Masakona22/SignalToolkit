@@ -3,8 +3,8 @@
 .container {
   .content-body {
     display: flex;
-    padding-bottom: 30px;
     flex-direction: column;
+    padding-bottom: 30px;
   }
 
   .header {
@@ -23,6 +23,7 @@
   .card-class {
     margin-bottom: 10px;
     padding: auto;
+    margin: auto;
     .secondary-header {
       display: flex;
       flex-direction: row;
@@ -35,20 +36,11 @@
       font-size: $font-size24;
       font-weight: bold;
     }
-
     .text {
       padding: $padding;
       font-size: $font-size16;
-    }
-
-    .button-group{
-      padding-top: $padding;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid $primary-color;
-      margin-top: $padding;
-      padding-top: $padding;
+      margin-left: $padding;
+      text-align: center;
     }
 
     .img-example {
@@ -59,12 +51,19 @@
       transform: translateX(75%);
       padding-bottom: $padding;
     }
+    .button-class {
+      padding-top: $padding;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $primary-color;
+      margin-top: $padding;
+      padding-top: $padding;
 
-    .next-button {
-      padding: $padding;
-      margin-left: $padding;
-      position: relative;
-      transform: translateX(435%);
+      .next-button {
+        padding-left: $padding;
+        margin-left: $margin;
+      }
     }
   }
 }

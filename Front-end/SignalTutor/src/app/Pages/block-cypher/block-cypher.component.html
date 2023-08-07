@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">2.1.3. Block cipher</p>
+  <div class="content-body">
+    <mat-card class="card-class">
+      <p class="secondary-header">What is a block cipher?</p>
+      <img
+        class="img-example"
+        src="assets/img/Symmetric encryption/block-cipher.png"
+        alt="Symmetric Encryption"
+      />
+      <p class="text">
+        A block cipher is a method of encrypting text (to produce ciphertext) in
+        which a cryptographic key and algorithm are applied to a block of data
+        (for example, 64 contiguous bits) at once as a group rather than to one
+        bit at a time.
+        <br /><br />
+        A block cipher uses a symmetric key and algorithm to encrypt and decrypt
+        a block of data. A block cipher requires an initialization vector (IV)
+        that is added to the input plaintext in order to increase the keyspace
+        of the cipher and make it more difficult to use brute force to break the
+        key. The IV is derived from a random number generator, which is combined
+        with text in the first block and the key to ensure all subsequent blocks
+        result in ciphertext that does not match that of the first encryption
+        block.
+        <br /><br />
+        The block size of a block cipher refers to the number of bits that are
+        processed together. Data Encryption Standard (DES) and Advanced
+        Encryption Standard (AES) are both symmetric block ciphers. The DES
+        block cipher was originally designed by IBM in 1975 and consisted of
+        64-bit blocks and a 56-bit key. This cipher is not considered secure
+        anymore, due to the short key size, and was replaced in 1998 by AES. AES
+        uses a 128-bit block size and a 128-, 192- or 256-bit key size.
+      </p>
+      <p class="secondary-header">
+        What are the different modes of operation in block cipher?
+      </p>
+      <p class="text">
+        Block ciphers only encrypt messages that are the same size as their
+        block length, so each block of plaintext with more or less blocks needs
+        to be encrypted separately. The following block cipher modes of
+        operation define how these blocks are encrypted:
+        <br />
+        <br />
+        <li>
+          <strong>Electronic codebook (ECB) mode: </strong>ECB mode is used to
+          electronically code messages as their plaintext form. It is the
+          simplest of all block cipher modes of operation. It does not add any
+          randomness to the key stream, and it is the only mode that can be used
+          to encrypt a single-bit stream. This means that each plaintext symbol,
+          such as a character from the plaintext alphabet, is converted into a
+          ciphertext symbol using the cipher's key and a substitution alphabet.
+          Each plaintext block is encrypted independently of all the other
+          blocks. If a plaintext block is only 8 bytes, only 8 bytes of the key
+          are used; if a plaintext block is 100 bytes, all 100 bytes of the key
+          are used.
+        </li>
+        <li>
+          <strong>Cipher block chaining (CBC) mode: </strong>CBC mode is a
+          method of encrypting data that ensures that each block of plaintext is
+          combined with the previous ciphertext block before being encrypted.
+          The symmetric key algorithm creates a ciphertext that depends on all
+          plaintext blocks processed before it in a data stream. This is done to
+          ensure that each block of the ciphertext is dependent on all of the
+          previous blocks. Each plaintext block is XORed (exclusive OR) with the
+          previous ciphertext block before being encrypted with the cipher
+          algorithm. CBC mode is used in a variety of security applications. For
+          example, Secure Sockets Layer/Transport Layer Security uses CBC mode
+          to encrypt data that is transferred over the internet.
+        </li>
+      </p>
+      <mat-card-actions class="button-class">
+        <button
+              mat-raised-button
+              color="warn"
+              class="btn-class"
+              [style.width.px]="280"
+              (click)="goBack()"
+            >
+              <mat-icon>skip_previous</mat-icon>
+              2.1.2. Stream cipher
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="next-button"
+              [style.width.px]="280"
+              (click)="goFoward()"
+            >
+              <mat-icon>skip_next</mat-icon>
+              2.1.4. Asymmetric encryption
+            </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

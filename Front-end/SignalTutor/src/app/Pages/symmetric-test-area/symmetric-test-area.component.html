@@ -21,11 +21,11 @@
       </aside>
       <section>
         <mat-card class="card-class-2">
-          <p class="secondary-header">Complete this diagram based on Symmetric encryption</p>
+          <p class="secondary-header">
+            Complete this diagram based on Symmetric encryption
+          </p>
           <div class="drop-box">
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
                   cdkDrag
@@ -34,10 +34,10 @@
                   class="component-img"
                 />
               </div>
-            </div><!--
-            --><div
-              class="example-list"
-            >
+            </div>
+            <!--
+            -->
+            <div class="example-list">
               <div class="example-box">
                 <img
                   cdkDrag
@@ -62,36 +62,30 @@
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/top right.png"
-                alt="top right"
+                  src="assets/img/Symmetric encryption/top right.png"
+                  alt="top right"
                   class="component-img"
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/blank.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/blank.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/blank.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/blank.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
@@ -110,22 +104,20 @@
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/blank.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/blank.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
             <div
-            class="example-list"
-            cdkDropList
-            [cdkDropListData]="secret_key2"
-            (cdkDropListDropped)="drop($event)"
+              class="example-list"
+              cdkDropList
+              [cdkDropListData]="secret_key2"
+              (cdkDropListDropped)="drop($event)"
             >
               <div class="example-box" *ngFor="let image of secret_key2">
                 <img
@@ -136,25 +128,21 @@
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/blank.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/blank.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/plain text.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/plain text.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
@@ -173,14 +161,12 @@
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/cipher text.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/cipher text.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
@@ -199,22 +185,40 @@
                 />
               </div>
             </div>
-            <div
-              class="example-list"
-            >
+            <div class="example-list">
               <div class="example-box">
                 <img
-                src="assets/img/Symmetric encryption/plain text.png"
-                alt="image"
-                class="component-img"
+                  src="assets/img/Symmetric encryption/plain text.png"
+                  alt="image"
+                  class="component-img"
                 />
               </div>
             </div>
           </div>
-          <mat-card-actions>
-            <button mat-raised-button color="primary" class="checkbtn" [style.width.px]="200" (click)="check(decryption,encryption,same_key,secret_key,secret_key2)" >
+          <mat-card-actions class="button-class">
+            <button
+              mat-raised-button
+              color="primary"
+              class="checkbtn"
+              [style.width.px]="200"
+              (click)="
+                check(decryption, encryption, same_key, secret_key, secret_key2)
+              "
+            >
               <mat-icon>check</mat-icon>
               Check
+            </button>
+            <button
+              mat-raised-button
+              color="accent"
+              class="resetbtn"
+              id="nextButton"
+              [style.width.px]="200"
+              [disabled]="true"
+              (click)="goToAsymmetric()"
+            >
+              <mat-icon>skip_next</mat-icon>
+              Next
             </button>
           </mat-card-actions>
         </mat-card>

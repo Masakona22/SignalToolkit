@@ -10,8 +10,12 @@ export class EncyptionTypesComponent {
   
     constructor(private router:Router) { }
 
-    testArea1(){
-      this.router.navigateByUrl('symmetricTestArea');
+    goBack(){
+      this.router.navigateByUrl('homePage');
+    }
+
+    goFoward(){
+      this.router.navigateByUrl('streamCypher');
     }
 
 }

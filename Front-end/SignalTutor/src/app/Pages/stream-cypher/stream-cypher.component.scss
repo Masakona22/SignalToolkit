@@ -1,0 +1,67 @@
+@import "/src/app/themes/themes.scss";
+
+.container{
+    .content-body{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $padding;
+        margin-top: $padding;
+        padding-top: $padding;
+        padding-bottom: $padding;
+        font-size: $font-size36;
+        font-weight: bold;
+      }
+      .card-class {
+        margin-bottom: 10px;
+        padding: auto;
+        margin: auto;
+        .secondary-header {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: $padding;
+          margin-top: $padding;
+          padding-top: $padding;
+          padding-bottom: $padding;
+          font-size: $font-size24;
+          font-weight: bold;
+        }
+        .text {
+          padding: $padding;
+          font-size: $font-size16;
+          margin-left: $padding;
+          
+        }
+    
+        .img-example {
+          width: 40%;
+          text-align: center;
+          justify-content: center;
+          position: relative;
+          transform: translateX(75%);
+          padding-bottom: $padding;
+        }
+        .button-class {
+          padding-top: $padding;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1px solid $primary-color;
+          margin-top: $padding;
+          padding-top: $padding;
+    
+          .next-button {
+            padding-left: $padding;
+            margin-left: $margin;
+          }
+        }
+      }
+}

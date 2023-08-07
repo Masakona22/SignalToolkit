@@ -45,12 +45,18 @@ export class SymmetricTestAreaComponent {
     ) {
       console.log('true');
       this.toastr.success('Correct Answer');
+      const nextButton = document.getElementById('nextButton') as HTMLButtonElement;
+      nextButton.disabled = false;
       return true;
     } else {
       console.log('false');
       this.toastr.error('Wrong Answer');
       return false;
     }
+  }
+
+  goToAsymmetric(){
+    this.router.navigateByUrl('asymmetricEncryption');
   }
   
   drop(event:CdkDragDrop<string[]>){

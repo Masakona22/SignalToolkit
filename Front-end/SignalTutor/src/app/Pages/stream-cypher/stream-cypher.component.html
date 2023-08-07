@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">2.1.2. Stream cipher</p>
+  <div class="content-body">
+    <mat-card class="card-class">
+      <p class="secondary-header">What is a stream cipher?</p>
+      <img
+        class="img-example"
+        src="assets/img/Symmetric encryption/stream-cipher.png"
+        alt="Symmetric Encryption"
+      />
+      <p class="text">
+        A stream cipher is a method of encrypting text (to produce ciphertext)
+        in which a cryptographic key and algorithm are applied to each binary
+        digit in a data stream, one bit at a time. The main alternative method
+        to stream cipher is, in fact, the block cipher, where a key and
+        algorithm are applied to blocks of data rather than individual bits in a
+        stream.
+      </p>
+      <p class="secondary-header">How does a stream cipher work?</p>
+      <p class="text">
+        A stream cipher is an encryption algorithm that uses a symmetric key to
+        encrypt and decrypt a given amount of data. A symmetric cipher key, as
+        opposed to an asymmetric cipher key, is an encryption tool that is used
+        in both encryption and decryption. Asymmetric keys will sometimes use
+        one key to encrypt a message and another to decrypt the respective
+        ciphertext. What makes stream ciphers particularly unique is that they
+        encrypt data one bit, or byte, at a time. This makes for a fast and
+        relatively simple encryption process.
+        <br /><br />
+        <strong>Basic encryption requires three main components:</strong>
+        <br />
+        <li>
+          <strong>Plaintext:</strong> The original message or data that is
+          intended to be encrypted.
+        </li>
+        <li>
+          <strong>Encryption algorithm:</strong> The mathematical function that
+          is used to encrypt the plaintext.
+        </li>
+        <li>
+          <strong>Encryption key:</strong> The secret key that is used to
+          encrypt the plaintext.
+        </li>
+      </p>
+      <p class="secondary-header">
+        The advantages and disadvantages of using a stream cipher
+      </p>
+      <p class="text">
+        Speed of encryption tops the list of advantages for stream ciphers. Once
+        a stream cipher makes a key, the encryption and decryption process is
+        almost instantaneous. This is largely due to the simplicity of
+        operation, a basic XOR function using two distinct data bits. Also, for
+        this reason, the hardware complexity of a stream cipher is quite low --
+        meaning a wider range of technologies can facilitate this mode of
+        operation.
+        <br /><br />
+        Another advantage of using stream ciphers is the ability to decrypt
+        selected sections of ciphertext. Since each bit of data in the
+        ciphertext corresponds with plaintext data in the same position, users
+        can decrypt ciphertext for part of a document rather than the entire
+        file. If Person A, for example, wanted to retrieve the original
+        plaintext data for just the first five bits, they would only need to
+        decrypt the first five bits of the ciphertext.
+        <br /><br />
+        The main disadvantage of stream ciphers is the fact that they are more
+        vulnerable to attacks than block ciphers. This is because stream ciphers
+        encrypt data one bit at a time, which makes them more susceptible to bit
+        manipulation attacks. If an attacker were to change a single bit in the
+        ciphertext, the corresponding bit in the plaintext would also change.
+        This would allow the attacker to change the meaning of the plaintext
+        without knowing the encryption key.
+      </p>
+      <mat-card-actions class="button-class">
+        <button
+              mat-raised-button
+              color="warn"
+              class="btn-class"
+              [style.width.px]="280"
+              (click)="goBack()"
+            >
+              <mat-icon>skip_previous</mat-icon>
+              2.1.1. Symmetric encryption
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="next-button"
+              [style.width.px]="250"
+              (click)="goFoward()"
+            >
+              <mat-icon>skip_next</mat-icon>
+              2.1.3. Block cipher
+            </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

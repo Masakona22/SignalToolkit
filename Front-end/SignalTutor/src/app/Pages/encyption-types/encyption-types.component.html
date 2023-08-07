@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <p class="header">Different types of encryptions</p>
+  <p class="header">2.1.1. Different types of encryptions</p>
   <div class="content-body">
     <mat-card class="card-class">
       <p class="secondary-header">1. Symmetric Encryption</p>
@@ -55,16 +55,26 @@
         advances in quantum computing compared to the current standards for
         asymmetric algorithms.
       </P>
-      <mat-card-actions>
+      <mat-card-actions class="button-group">
         <button
           mat-raised-button
-          color="primary"
+          color="warn"
           class="button-class"
-          [style.width.px]="200"
-          (click)="testArea1()"
+          [style.width.px]="250"
+          (click)="goBack()"
         >
-          <mat-icon>play_arrow</mat-icon>
-          View Module
+          <mat-icon>home</mat-icon>
+          Go to modules
+        </button>
+        <button
+          mat-raised-button
+          color="accent"
+          class="button-class"
+          [style.width.px]="250"
+          (click)="goFoward()"
+        >
+          <mat-icon>skip_next</mat-icon>
+          2.1.2. Stream cipher
         </button>
       </mat-card-actions>
     </mat-card>

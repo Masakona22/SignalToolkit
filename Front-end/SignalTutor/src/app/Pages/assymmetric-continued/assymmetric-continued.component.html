@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <p class="header">2.1.5. asymmetric encryption</p>
+  <div class="content-body">
+    <mat-card class="card-class">
+      <p class="secondary-header">Uses of asymmetric cryptography</p>
+      <p class="text">
+        Asymmetric cryptography is typically used to authenticate data using
+        digital signatures. A digital signature is a mathematical technique used
+        to validate the authenticity and integrity of a message, software or
+        digital document. It is the digital equivalent of a handwritten
+        signature or stamped seal. Based on asymmetric cryptography, digital
+        signatures can provide assurances of evidence to the origin, identity
+        and status of an electronic document, transaction or message, as well as
+        acknowledge informed consent by the signer. Asymmetric cryptography can
+        also be applied to systems in which many users may need to encrypt and
+        decrypt messages, including:
+        <li>
+          <strong>Encrypted email: </strong>A public key can be used to encrypt a
+          message and a private key can be used to decrypt it.
+        </li>
+        <li>
+          <strong>Secure browsing: </strong>Asymmetric cryptography is used to
+          establish a secure connection over an insecure network, such as the
+          internet.
+        </li>
+        <li>
+          <strong>Secure shell (SSH): </strong>SSH is a cryptographic network
+          protocol that uses asymmetric cryptography to authenticate users and
+          machines and encrypt the information that passes between them.
+        </li>
+        <li>
+          <strong>Virtual private networks (VPNs): </strong>VPNs use asymmetric
+          cryptography to authenticate users and encrypt information that passes
+          between them.
+        </li>
+        <li>
+          <strong>Cryptocurrencies: </strong> Bitcoin and other cryptocurrencies
+          rely on asymmetric cryptography. Users have public keys that everyone
+          can see and private keys that are kept secret. Bitcoin uses a
+          cryptographic algorithm to ensure only legitimate owners can spend the
+          funds.
+        </li>
+      </p>
+      <p class="secondary-header">
+        What are the benefits and disadvantages of asymmetric cryptography?
+      </p>
+      <p class="text">
+        <strong>The benefits of asymmetric cryptography include:</strong>
+        <br /><br />
+        <li>
+          Security is increased since the private keys don't ever have to be
+          transmitted or revealed to anyone.
+        </li>
+        <li>
+          The private keys can be kept on a separate device, such as a smart
+          card, and never be exposed to the network.
+        </li>
+        <li>
+          The private keys can be used to create digital signatures that verify
+          the authenticity of messages.
+        </li>
+        <li>
+          The key distribution problem is eliminated because there's no need for
+          exchanging keys.
+        </li>
+        <br /><br />
+        <strong>The disadvantages of asymmetric cryptography include:</strong>
+        <br /><br />
+        <li>It's slower than symmetric cryptography.</li>
+        <li>
+          It's more computationally intensive than symmetric cryptography.
+        </li>
+        <li>It's more difficult to implement.</li>
+        <li>
+          Because public keys aren't authenticated, no one can ensure a public
+          key belongs to the person specified. Consequently, users must verify
+          that their public keys belong to them.
+        </li>
+        <li>
+          If a malicious actor identifies a person's private key, the attacker
+          can read that individual's messages.
+        </li>
+      </p>
+      <mat-card-actions class="button-class">
+        <button
+          mat-raised-button
+          color="warn"
+          class="btn-class"
+          [style.width.px]="280"
+          (click)="goBack()"
+        >
+          <mat-icon>skip_previous</mat-icon>
+          2.1.4. Block cipher
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          class="next-button"
+          [style.width.px]="280"
+          (click)="goFoward()"
+        >
+          <mat-icon>quiz</mat-icon>
+          2.2. Quizzes
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
